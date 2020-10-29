@@ -1,0 +1,35 @@
+{
+    "name": "armincms/conversion",
+    "description": "The Armin CMS conversion manager.",
+    "keywords": [
+        "laravel",
+        "armincms",
+        "spatie",
+        "media",
+        "conversion"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Armincms\\Conversion\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Armincms\\Conversion\\ConversionServiceProvider"
+            ],
+            "aliases" : {
+                "Conversion" : "Armincms\\Conversion\\FAcades\\Conversion"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
