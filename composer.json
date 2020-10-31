@@ -23,7 +23,7 @@
                 "Armincms\\Conversion\\ConversionServiceProvider"
             ],
             "aliases" : {
-                "Conversion" : "Armincms\\Conversion\\FAcades\\Conversion"
+                "Conversion" : "Armincms\\Conversion\\Facades\\Conversion"
             }
         }
     },
