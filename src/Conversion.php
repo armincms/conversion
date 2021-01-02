@@ -33,7 +33,7 @@ abstract class Conversion implements ConversionContracts
             'width'         => 320,
             'height'        => 190,
             'upsize'        => false, // cutting type
-            'compress'      => 75,
+            'compress'      => 90,
             'extension'     => null, // save extension
             'placeholder'   => imageholder(320, 190),
             'label'         => null,
