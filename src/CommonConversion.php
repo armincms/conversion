@@ -17,7 +17,7 @@ class CommonConversion extends Conversion
                 'width'         => 768,
                 'height'        => 400, 
                 'upsize'        => false, // cutting type
-                'compress'      => 90,
+                'compress'      => 25,
                 'extension'     => null, // save extension
                 'placeholder'   => image_placeholder(768, 400),
                 'label'         => __('Common larg image'),
@@ -26,7 +26,7 @@ class CommonConversion extends Conversion
                 'width'         => 320,
                 'height'        => 217, 
                 'upsize'        => false, // cutting type
-                'compress'      => 90,
+                'compress'      => 25,
                 'extension'     => null, // save extension
                 'placeholder'   => image_placeholder(320, 217),
                 'label'         => __('Common thumbnail image'),
