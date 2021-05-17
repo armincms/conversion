@@ -35,10 +35,26 @@ abstract class Conversion implements ConversionContracts
             'upsize'        => false, // cutting type
             'compress'      => 25,
             'extension'     => null, // save extension
-            'placeholder'   => imageholder(320, 190),
+            'placeholder'   => $this->placeholder(320, 190),
             'label'         => null,
             'manipulations' => ['crop' => 'crop-center'], 
         ];
+    }
+
+    /**
+     * Get the missing image plcaeholder.
+     * 
+     * @param  int $width  
+     * @param  int $height 
+     * @return string         
+     */
+    public function placeholder(int $width = 320, int $height = 320): string
+    {
+        return str_replace(
+            ['WIDTH', 'HEIGHT', 'NAME'], 
+            [$width, $height, config('app.name')],
+            config('conversion.placeholder', 'http://via.placeholder.com/WIDTHxHEIGHT?text=NAME') 
+        );
     }
 
     /**
