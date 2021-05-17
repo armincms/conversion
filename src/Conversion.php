@@ -23,6 +23,20 @@ abstract class Conversion implements ConversionContracts
     }
 
     /**
+     * Register new schema.
+     * 
+     * @param  string $name  
+     * @param  array  $config
+     * @return $this        
+     */
+    public function merge(string $name, array $config)
+    {
+        $this->schemas[$name] = array_merge($this->schemas[$name] ?? $this->defaults(), $config);
+
+        return $this;
+    }
+
+    /**
      * Default schema configurations.
      * 
      * @return array
