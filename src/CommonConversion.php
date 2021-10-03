@@ -19,7 +19,7 @@ class CommonConversion extends Conversion
                 'upsize'        => false, // cutting type
                 'compress'      => 25,
                 'extension'     => null, // save extension
-                'placeholder'   => image_placeholder(768, 400),
+                'placeholder'   => $this->placeholder(768, 400),
                 'label'         => __('Common larg image'),
             ],
             'thumbnail' => [  
@@ -28,7 +28,7 @@ class CommonConversion extends Conversion
                 'upsize'        => false, // cutting type
                 'compress'      => 25,
                 'extension'     => null, // save extension
-                'placeholder'   => image_placeholder(320, 217),
+                'placeholder'   => $this->placeholder(320, 217),
                 'label'         => __('Common thumbnail image'),
             ], 
         ], parent::schemas());
