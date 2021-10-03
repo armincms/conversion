@@ -52,7 +52,7 @@ class ConversionManager extends Manager
      */
     public function has($driver)
     {
-        return method_exists($this, $driver) || isset($this->customCreators, $driver);
+        return method_exists($this, $driver) || isset($this->customCreators[$driver]);
     }
 
     /**
