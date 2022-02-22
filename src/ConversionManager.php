@@ -2,8 +2,9 @@
 
 namespace Armincms\Conversion;
 
-use Illuminate\Support\Manager; 
 use Armincms\Conversion\Contracts\Conversion;
+use Illuminate\Support\Manager; 
+use Illuminate\Support\Str; 
 
 class ConversionManager extends Manager
 {
@@ -52,7 +53,9 @@ class ConversionManager extends Manager
      */
     public function has($driver)
     {
-        return method_exists($this, $driver) || isset($this->customCreators[$driver]);
+        $method = 'create'.Str::studly($driver).'Driver';
+
+        return method_exists($this, $method) || isset($this->customCreators, $driver);
     }
 
     /**
