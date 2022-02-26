@@ -55,7 +55,7 @@ class ConversionManager extends Manager
     {
         $method = 'create'.Str::studly($driver).'Driver';
 
-        return method_exists($this, $method) || isset($this->customCreators, $driver);
+        return method_exists($this, $method) || isset($this->customCreators[$driver]);
     }
 
     /**
